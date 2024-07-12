@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import DataTableComponent from './components/Components';
 
-function App() {
+// بيانات العملاء
+const customers = [
+  { id: 1, name: 'Ahmed Ali' },
+  { id: 2, name: 'Aya Elsayed' },
+  { id: 3, name: 'Mina Adel' },
+  { id: 4, name: 'Sarah Reda' },
+  { id: 5, name: 'Mohamed Sayed' }
+];
+
+// بيانات المعاملات
+const transactions = [
+  { id: 1, customer_id: 1, date: '2022-01-01', amount: 1000 },
+  { id: 2, customer_id: 1, date: '2022-01-02', amount: 2000 },
+  { id: 3, customer_id: 2, date: '2022-01-01', amount: 550 },
+  { id: 4, customer_id: 3, date: '2022-01-01', amount: 500 },
+  { id: 5, customer_id: 2, date: '2022-01-02', amount: 1300 },
+  { id: 6, customer_id: 4, date: '2022-01-01', amount: 750 },
+  { id: 7, customer_id: 3, date: '2022-01-02', amount: 1250 },
+  { id: 8, customer_id: 5, date: '2022-01-01', amount: 2500 },
+  { id: 9, customer_id: 5, date: '2022-01-02', amount: 875 }
+];
+
+const data = transactions.map(transaction => {
+  const customer = customers.find(cust => cust.id === transaction.customer_id);
+  return {
+    ...transaction,
+    customerName: customer ? customer.name : 'Unknown'
+  };
+});
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <DataTableComponent data={data} />
     </div>
   );
-}
+};
 
 export default App;
