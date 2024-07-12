@@ -22,7 +22,7 @@ const columns = [
 const DataTableComponent = ({ data }) => {
   return (
     <DataTable
-      title="عرض البيانات"
+      title=" Title"
       columns={columns}
       data={data}
       pagination
