@@ -17,3 +17,10 @@ code {
   justify-content: center !important;
   align-items: center !important;
 }
+
+
+.chart-container {
+  width: 80%; 
+  height: 50%;
+  margin: 0 auto; 
+}
