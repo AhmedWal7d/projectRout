@@ -24,3 +24,9 @@ code {
   height: 50%;
   margin: 0 auto; 
 }
+.Search{
+  margin-top: 40px;
+  display: flex;
+  justify-content: start;
+  margin-left: 20px;
+}
