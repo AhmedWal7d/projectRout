@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/projectRout/static/css/main.a77ef1bb.css",
+    "main.js": "/projectRout/static/js/main.1252272e.js",
+    "static/js/453.ed3810f9.chunk.js": "/projectRout/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/projectRout/index.html",
+    "main.a77ef1bb.css.map": "/projectRout/static/css/main.a77ef1bb.css.map",
+    "main.1252272e.js.map": "/projectRout/static/js/main.1252272e.js.map",
+    "453.ed3810f9.chunk.js.map": "/projectRout/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a77ef1bb.css",
+    "static/js/main.1252272e.js"
+  ]
+}
